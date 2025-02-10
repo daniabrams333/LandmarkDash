@@ -9,10 +9,28 @@ import SwiftUI
 
 struct welcomepage1: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       ZStack{
+            Color.background
+                .ignoresSafeArea()
+           Image("darkLogo")
+             
+        }
+        Button{
+            ContentView()
+        }label: {
+            Text("LETS RIDE")
+                .padding()
+.frame(width:150,height: 50)
+            background(Color("buttonColor"))
+                .cornerRadius(10)
+                .padding()
+        }
+        }
     }
-}
+
+
 
 #Preview {
     welcomepage1()
 }
+
