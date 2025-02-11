@@ -27,7 +27,7 @@ struct InstructionsView: View {
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width:15,height:15)))
                 }
                 Button {
-                    ContentView()
+                  //  ContentView()
                 } label: {
                     Text("Start Game")
                         .padding()
