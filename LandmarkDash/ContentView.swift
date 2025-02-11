@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    //Make Instance of GameScene
+    @EnvironmentObject var scene:GameScene
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                welcomepage1()
+            }
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(GameScene())
 }
