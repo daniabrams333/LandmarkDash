@@ -6,34 +6,56 @@
 //
 
 import SwiftUI
-import SpriteKit
 
 struct welcomepage1: View {
-    @EnvironmentObject var scene: GameScene
     var body: some View {
-       ZStack{
-            Color.background
-                .ignoresSafeArea()
-           Image("darkLogo")
-             
-        }
-        Button{
-           // ContentView()
-        }label: {
-            Text("LETS RIDE")
-                .padding()
-.frame(width:150,height: 50)
-            background(Color("buttonColor"))
-                .cornerRadius(10)
-                .padding()
-        }
+        NavigationView {
+            ZStack {
+                
+                Color("background")
+                    .ignoresSafeArea()
+                
+                
+                Image("darkLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                
+                Image("skyline")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                
+                VStack {
+                    Spacer()
+                    
+                    
+                    NavigationLink(destination: ContentView()) {
+                        Text("LETS RIDE")
+                            .padding()
+                            .frame(width: 150, height: 50)
+                            .background(Color("buttonColor"))
+                            .cornerRadius(10)
+                            .padding()
+                        
+                        NavigationLink(destination: ContentView()) {
+                            Text("ROLL OUT")
+                                .padding()
+                                .frame(width: 150, height: 50)
+                                .background(Color("buttonColor"))
+                                .cornerRadius(10)
+                                .padding()
+                        }
+                        
+                    }
+                }
+            }
         }
     }
-
-
-
-#Preview {
-    welcomepage1()
-        .environmentObject(GameScene())
+    
+    struct WelcomePage1_Previews: PreviewProvider {
+        static var previews: some View {
+            welcomepage1()
+        }
+    }
 }
-
