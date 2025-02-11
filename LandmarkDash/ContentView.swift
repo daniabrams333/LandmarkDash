@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SpriteKit
+import GameKit
 
 struct ContentView: View {
     //Make Instance of GameScene

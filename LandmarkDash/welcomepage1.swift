@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct welcomepage1: View {
+    @EnvironmentObject var scene: GameScene
     var body: some View {
        ZStack{
             Color.background
@@ -16,7 +18,7 @@ struct welcomepage1: View {
              
         }
         Button{
-            ContentView()
+           // ContentView()
         }label: {
             Text("LETS RIDE")
                 .padding()
@@ -32,5 +34,6 @@ struct welcomepage1: View {
 
 #Preview {
     welcomepage1()
+        .environmentObject(GameScene())
 }
 
