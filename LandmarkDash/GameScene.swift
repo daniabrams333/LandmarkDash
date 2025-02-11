@@ -8,7 +8,16 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, ObservableObject {
+class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
+    
+    // Let's create some sprites!
+    let horizon = SKSpriteNode(imageNamed: "skyline")
+    var car = SKSpriteNode()
+    var linesNRoad = SKSpriteNode()
+    var memento = Mementos(sprite: .init(imageNamed: ""))
+    
+    @Published var gameOver = false
+  
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
